@@ -31,11 +31,13 @@ If you find one, feel free to open up a new issue or even better, create a pull 
 
 #### Resolved
 - [x] If a player hits zero, and then presses `cancel` in the restart dialogue, any subsequent swipes will also invoke the dialogue. Fixed by storing an array of players who have lost and skipping them in the check for other player who have hit zero.
+- [x] If a player keeps on trying to decrease their score below zero, it will take that many swipes to bring it back up, even though the text would still say `0`. Fixed by simply not allowing that.
 
 ## Change Log
 * v1.0 - initial release
 * v1.1 - more player support
 * v1.2 - restart bug fix
+* v1.3 - negative score fix
 
 ## Contributors
 Sachin Agrawal: I'm a self-taught programmer who knows many languages and I'm into app, game, and web development. For more information, check out my website or Github profile. If you would like to contact me, my email is [github@sachin.email](mailto:github@sachin.email).

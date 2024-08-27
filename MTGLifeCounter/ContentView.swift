@@ -242,11 +242,11 @@ struct ContentView: View {
         case 0:
             if value.translation.height < -swipeThreshold {
                 life.wrappedValue += 1 // Swipe up
-            } else if value.translation.height > swipeThreshold {
+            } else if value.translation.height > swipeThreshold && life.wrappedValue > 0 {
                 life.wrappedValue -= 1 // Swipe down
             }
         case 90:
-            if value.translation.width < -swipeThreshold {
+            if value.translation.width < -swipeThreshold && life.wrappedValue > 0 {
                 life.wrappedValue -= 1 // Swipe left
             } else if value.translation.width > swipeThreshold {
                 life.wrappedValue += 1 // Swipe right
@@ -254,11 +254,11 @@ struct ContentView: View {
         case 180:
             if value.translation.height > swipeThreshold {
                 life.wrappedValue += 1 // Swipe up
-            } else if value.translation.height < -swipeThreshold {
+            } else if value.translation.height < -swipeThreshold && life.wrappedValue > 0 {
                 life.wrappedValue -= 1 // Swipe down
             }
         case 270:
-            if value.translation.width > swipeThreshold {
+            if value.translation.width > swipeThreshold && life.wrappedValue > 0 {
                 life.wrappedValue -= 1 // Swipe left
             } else if value.translation.width < -swipeThreshold {
                 life.wrappedValue += 1 // Swipe right
